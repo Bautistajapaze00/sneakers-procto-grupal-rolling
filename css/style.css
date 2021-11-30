@@ -36,6 +36,11 @@ main{
     color:rgb(211, 211, 211);
 }
 
+.imagenFooter{
+    width: 50%;
+    height: auto;
+}
+
 /* Principal */
 
 .div-headerIndex{
@@ -71,6 +76,12 @@ main{
     text-shadow: 0 0 10px #000;
 }
 
+.subtituloHeader{
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.849);
+    font-weight: 500;
+}
+
 .imgCardsLaterales{
     height: 100%;
     width: 100%;
@@ -93,6 +104,14 @@ main{
 /* Media queries */
 
 @media screen and (max-width: 992px){
+    /* Generales */
+
+    .imagenFooter{
+        width: 25%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
     /* Principal */
     .queryAside{
         display: none;
