@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
+/* Generales */
+
 :root{
     --bs-danger: #de3a3a;
 }
@@ -34,6 +36,8 @@ main{
     color:rgb(211, 211, 211);
 }
 
+/* Principal */
+
 .div-headerIndex{
     position: relative;
 }
@@ -61,7 +65,6 @@ main{
 .tituloHeader{
     font-family: 'Oswald', sans-serif;
     font-size: 5rem;
-    /* Cambiar tamaño con media */
     color: white;
     margin: 0;
     padding: 0;
@@ -78,7 +81,19 @@ main{
     display: none;
 }
 
+/* Admin */
+
+
+/* Acerca de */
+
+
+/* 404 */
+
+
+/* Media queries */
+
 @media screen and (max-width: 992px){
+    /* Principal */
     .queryAside{
         display: none;
     }
@@ -86,4 +101,6 @@ main{
     .queryBusqueda{
         display: block;
     }
+
+    /* Agregar seccion si se necesita */
 }
