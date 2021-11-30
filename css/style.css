@@ -9,6 +9,21 @@
     color: #000;
 }
 
+header{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
+}
+
+main{
+    padding-top: 61.83px;
+}
+
+.fuenteOswald{
+    font-family: 'Oswald', sans-serif;
+}
+
 .tituloFooter{
     font-family: 'Oswald', sans-serif;
     font-size: 1.75rem;
@@ -17,4 +32,58 @@
 
 .textoFooter{
     color:rgb(211, 211, 211);
+}
+
+.div-headerIndex{
+    position: relative;
+}
+
+.div-imagenHeaderIndex{
+    height: 35vh;
+}
+
+.imagenHeaderIndex{
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.div-tituloHeader{
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.tituloHeader{
+    font-family: 'Oswald', sans-serif;
+    font-size: 5rem;
+    /* Cambiar tamaño con media */
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 0 10px #000;
+}
+
+.imgCardsLaterales{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.queryBusqueda{
+    display: none;
+}
+
+@media screen and (max-width: 992px){
+    .queryAside{
+        display: none;
+    }
+
+    .queryBusqueda{
+        display: block;
+    }
 }
