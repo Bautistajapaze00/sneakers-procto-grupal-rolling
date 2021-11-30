@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+:root{
+    --bs-danger: #de3a3a;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #000;
+}
+
+.tituloFooter{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.75rem;
+    color: #000;
+}
+
+.textoFooter{
+    color:rgb(211, 211, 211);
+}
