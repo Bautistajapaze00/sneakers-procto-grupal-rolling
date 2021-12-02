@@ -96,17 +96,36 @@ main{
 
 
 /* Acerca de */
-.slider{
+/*.slider{
     margin-top: 175px;
-  }
+}*/
 
-  .opacity:hover{
+.div-imgPerfil{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.imgPerfil{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.posImgTop{
+    object-position: top;
+}
+
+.opacity:hover{
     position: relative;
     bottom: 3px;
     right: 3px;
     filter: opacity(50%);
     transition:1s
-    }
+}
 
     
 
