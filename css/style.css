@@ -96,7 +96,19 @@ main{
 
 
 /* Acerca de */
+.slider{
+    margin-top: 175px;
+  }
 
+  .opacity:hover{
+    position: relative;
+    bottom: 3px;
+    right: 3px;
+    filter: opacity(50%);
+    transition:1s
+    }
+
+    
 
 /* 404 */
 
@@ -121,5 +133,12 @@ main{
         display: block;
     }
 
+    
     /* Agregar seccion si se necesita */
+}
+@media all and (max-width: 567px){
+    .messi-responsive{
+        height: 100px;
+        object-fit: cover;
+    }
 }
