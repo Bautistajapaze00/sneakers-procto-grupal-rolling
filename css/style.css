@@ -96,9 +96,6 @@ main{
 
 
 /* Acerca de */
-/*.slider{
-    margin-top: 175px;
-}*/
 
 .div-imgPerfil{
     width: 300px;
@@ -131,6 +128,13 @@ main{
 
 /* 404 */
 
+.img404vertical{
+    display: none;
+}
+
+.img404horizontal{
+    display: block;
+}
 
 /* Media queries */
 
@@ -154,10 +158,14 @@ main{
 
     
     /* Agregar seccion si se necesita */
-}
-@media all and (max-width: 567px){
-    .messi-responsive{
-        height: 100px;
-        object-fit: cover;
+
+    /* 404 */
+
+    .img404vertical{
+        display: block;
+    }
+
+    .img404horizontal{
+        display: none;
     }
 }
