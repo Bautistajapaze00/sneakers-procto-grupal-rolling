@@ -29,6 +29,8 @@ foreach(productosPantalones, function(producto){crearCard(producto, grillaPantal
 foreach(productosZapatillas, function(producto){crearCard(producto, grillaZapatillas);});
 foreach(productosAccesorios, function(producto){crearCard(producto, grillaAccesorios);});
 
+//crear card de ultimos ingresos
+
 function crearCard(producto, grilla){
     grilla.innerHTML += `<div class="col-sm-12 col-md-4">
                             <div class="card">
