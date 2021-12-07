@@ -95,6 +95,8 @@ main{
 /* Admin */
 .colorbg {
     background: rgb(33, 47, 61);
+    padding: 4%;
+    color: white;
 }
 
 /* Acerca de */
