@@ -92,25 +92,13 @@ main{
     display: none;
 }
 
-/* Busqueda */
-
-.txtInicioBreadcrumb{
-    text-decoration: underline;
-    color: rgb(56, 56, 56);
-}
-
-.mainBusqueda{
-    padding-bottom: 154px;
-}
-
-.footerBusqueda{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
 /* Admin */
+
+.colorbg {
+    background: rgb(33, 47, 61);
+    padding: 3%;
+    color: white;
+}
 
 /* Acerca de */
 
