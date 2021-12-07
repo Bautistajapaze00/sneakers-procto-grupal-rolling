@@ -93,10 +93,9 @@ main{
 }
 
 /* Admin */
-
- .fontTitulo{
-    font-family: 'Oswald', sans-serif;
- }
+.colorbg {
+    background: rgb(33, 47, 61);
+}
 
 /* Acerca de */
 .slider{

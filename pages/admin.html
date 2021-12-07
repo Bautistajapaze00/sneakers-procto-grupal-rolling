@@ -32,7 +32,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <a class="navbar-brand" href="../index.html">
             <img src="../img/logo.png" alt="Logo Sneakers" width="100" />
@@ -68,16 +68,17 @@
         </div>
       </nav>
     </header>
-    <main class="container">
+    <main class="container ">
       <section>
-        <h1 class="display-3 mt-5 text-center fontTitulo">Administrar Productos</h1>
+        <h1 class="display-3 mt-5 text-center fuenteOswald">Administrar Productos</h1>
         <hr />
-        <form id="formProducto">
-          <div class="mb-3">
-            <label for="codigo" class="form-label">Codigo</label>
+        <section>
+        <form id="formProducto" >
+          <div class="mb-3 ">
+            <label for="codigo" class="form-label  ">Codigo</label>
             <input
               type="text"
-              class="form-control"
+              class="form-control "
               id="codigo"
               placeholder="1234"
             />
@@ -116,17 +117,23 @@
             <label for="url" class="form-label">URL</label>
             <input type="text" class="form-control" id="url" placeholder="http://www.google.com" />
           </div>
-          <button class="btn btn-primary" type="submit">Guardar</button>
-        </form>
+          <select class="form-select my-5" aria-label="Default select example">
+            <option selected>Categorias</option>
+            <option value="2">Remeras</option>
+            <option value="3">Zapatillas</option>
+            <option value="3">Patalones</option>
+            <option value="3">Accesorios</option>
+          </select>
+          </form>
+        <button class="btn btn-primary" type="submit">Guardar</button>
+      </section>
         <div class="alert alert-danger my-5 d-none" role="alert" id="msjAlerta">
           Debe completar todos los datos
         </div>
       </section>
       <section class="my-5">
         <button class="btn btn-primary" id="btnAgregar">Nuevo</button>
-        <button class="btn btn-secondary" id="btnDatosPrueba" disabled>
-          Cargar datos de prueba
-        </button>
+        
         <div class="table-responsive">
           <table class="table my-5">
             <thead>
