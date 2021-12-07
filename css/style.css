@@ -133,6 +133,11 @@ main{
 
 .img404horizontal{
     display: block;
+    height: 86%;
+    width: 71%;
+}
+.divPegado{
+    margin-top: -5%;
 }
  
 /* Media queries */
@@ -166,5 +171,8 @@ main{
 
     .img404horizontal{
         display: none;
+    }
+    .divPegado{
+        margin-top: 0%;
     }
 }
