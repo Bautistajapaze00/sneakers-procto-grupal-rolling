@@ -80,7 +80,7 @@
               type="text"
               class="form-control "
               id="codigo"
-              placeholder="1234"
+              placeholder="ingrese el codigo unico de su producto"
             />
             <div class="invalid-feedback">
               Debe ingresar al menos un caracter
@@ -110,20 +110,34 @@
               type="text"
               class="form-control"
               id="cantidad"
-              placeholder="10"
+              placeholder="agregue la cantidad de stock"
             />
           </div>
           <div class="mb-3">
             <label for="url" class="form-label">URL</label>
             <input type="text" class="form-control" id="url" placeholder="http://www.google.com" />
           </div>
+          <div class="mb-3 ">
+            <label for="precio" class="form-label  ">Precio</label>
+            <input
+              type="text"
+              class="form-control "
+              id="precio"
+              placeholder="ingrese el precio del producto"
+            />
+            <div class="invalid-feedback">
+              Debe ingresar al menos un caracter
+            </div>
+          </div>
+          <div class="mb-3">
           <label >Categorias</label>
-          <select class="form-select my-3" aria-label="Default select example">
+          <select class="form-select my-2" aria-label="Default select example">
             <option value="2">Remeras</option>
             <option value="3">Zapatillas</option>
             <option value="3">Patalones</option>
             <option value="3">Accesorios</option>
           </select>
+        </div>
           </form>
         <button class="btn btn-primary" type="submit">Guardar</button>
       </section>
