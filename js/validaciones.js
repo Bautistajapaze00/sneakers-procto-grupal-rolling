@@ -42,7 +42,8 @@ export function validarGeneral(
   campoProducto,
   campoDescripcion,
   campoCantidad,
-  campoURL
+  campoURL,
+  campoPrecio
 ) {
   // volver a validar todos los campos
 
@@ -52,6 +53,7 @@ export function validarGeneral(
     campoRequerido(campoProducto) &&
     campoRequerido(campoDescripcion) &&
     validarNumeros(campoCantidad) &&
+    validarNumeros(campoPrecio) &&
     validarURL(campoURL)
   ) {
     alerta.className = "alert alert-danger my-5 d-none";

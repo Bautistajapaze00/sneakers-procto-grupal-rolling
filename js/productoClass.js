@@ -4,13 +4,15 @@ export class Producto {
     campoProducto,
     campoDescripcion,
     campoCantidad,
-    campoURL
+    campoURL,
+    campoPrecio
   ) {
     this.codigo = campoCodigo;
     this.producto = campoProducto;
     this.descripcion = campoDescripcion;
     this.cantidad = campoCantidad;
     this.url = campoURL;
+    this.precio = campoPrecio;
   }
 
   get mostrarCodigo() {
@@ -28,6 +30,9 @@ export class Producto {
   get mostrarURL() {
     return this.url;
   }
+  get mostrarPrecio() {
+    return this.precio;
+  }
 
   set modificarCodigo(nuevoCodigo) {
     this.codigo = nuevoCodigo;
@@ -43,5 +48,9 @@ export class Producto {
   }
   set modificarURL(nuevaURL) {
     this.url = nuevaURL;
+  }
+
+  set modificarPrecio(nuevoPrecio) {
+    this.precio = nuevoPrecio;
   }
 }

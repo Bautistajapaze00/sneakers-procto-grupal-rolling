@@ -13,6 +13,7 @@ let campoDescripcion = document.querySelector("#descripcion");
 let campoCantidad = document.querySelector("#cantidad");
 let campoURL = document.querySelector("#url");
 let formularioProducto = document.querySelector("#formProducto");
+let campoPrecio = document.querySelector("#precio");
 // lista de productos
 let listaProductos =
   JSON.parse(localStorage.getItem("listaProductosKey")) || [];
@@ -34,6 +35,9 @@ campoCantidad.addEventListener("blur", () => {
 campoURL.addEventListener("blur", () => {
   validarURL(campoURL);
 });
+campoPrecio.addEventListener("blur", () => {
+  validarNumeros(campoPrecio);
+});
 formularioProducto.addEventListener("submit", guardarProducto);
 btnAgregar.addEventListener("click", limpiarFormulario);
 
@@ -49,7 +53,8 @@ function guardarProducto(e) {
       campoProducto,
       campoDescripcion,
       campoCantidad,
-      campoURL
+      campoURL,
+      campoPrecio
     )
   ) {
     if (productoExistente == false) {
@@ -68,7 +73,8 @@ function crearProducto() {
     campoProducto.value,
     campoDescripcion.value,
     campoCantidad.value,
-    campoURL.value
+    campoURL.value,
+    campoPrecio.value
   );
   console.log(productoNuevo);
   // guardar el producto creado en el arreglo
@@ -110,9 +116,10 @@ function crearFila(producto) {
     <td>${producto.descripcion}</td>
     <td>${producto.cantidad}</td>
     <td>${producto.url}</td>
+    <td>${producto.precio}</td>
     <td>
-      <button class="btn btn-warning" onclick="prepararEdicionProducto(${producto.codigo})">Editar</button
-      ><button class="btn btn-danger" onclick="borrarProducto(${producto.codigo})">Borrar</button>
+      <button class="btn btn-warning" onclick="prepararEdicionProducto('${producto.codigo}')">Editar</button
+      ><button class="btn btn-danger" onclick="borrarProducto('${producto.codigo}')">Borrar</button>
     </td>
   </tr>`;
 }
@@ -145,6 +152,7 @@ window.prepararEdicionProducto = function (codigo) {
   campoDescripcion.value = productoBuscado.descripcion;
   campoCantidad.value = productoBuscado.cantidad;
   campoURL.value = productoBuscado.url;
+  campoPrecio.value = productoBuscado.precio;
   // aqui modifico la variable boolena
   productoExistente = true;
 };
@@ -161,6 +169,7 @@ function modificarProducto() {
   listaProductos[posicionProducto].producto = campoProducto.value;
   listaProductos[posicionProducto].cantidad = campoCantidad.value;
   listaProductos[posicionProducto].url = campoURL.value;
+  listaProductos[posicionProducto].precio = campoPrecio.value;
   console.log(listaProductos);
   //actualizar los datos del localstorage
   guardarLocalstorage();
