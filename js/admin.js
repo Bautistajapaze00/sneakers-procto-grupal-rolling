@@ -14,6 +14,7 @@ let campoCantidad = document.querySelector("#cantidad");
 let campoURL = document.querySelector("#url");
 let formularioProducto = document.querySelector("#formProducto");
 let campoPrecio = document.querySelector("#precio");
+let campoCat = document.querySelector("#cat");
 // lista de productos
 let listaProductos =
   JSON.parse(localStorage.getItem("listaProductosKey")) || [];
@@ -38,6 +39,10 @@ campoURL.addEventListener("blur", () => {
 campoPrecio.addEventListener("blur", () => {
   validarNumeros(campoPrecio);
 });
+campoCat.addEventListener("blur", () => {
+  campoRequerido(campoCat);
+});
+
 formularioProducto.addEventListener("submit", guardarProducto);
 btnAgregar.addEventListener("click", limpiarFormulario);
 
@@ -47,6 +52,7 @@ cargaInicial();
 function guardarProducto(e) {
   e.preventDefault();
   // validar los campos
+
   if (
     validarGeneral(
       campoCodigo,
@@ -54,7 +60,8 @@ function guardarProducto(e) {
       campoDescripcion,
       campoCantidad,
       campoURL,
-      campoPrecio
+      campoPrecio,
+      campoCat
     )
   ) {
     if (productoExistente == false) {
@@ -66,7 +73,6 @@ function guardarProducto(e) {
 }
 
 function crearProducto() {
-  console.log("aqui creo el producto");
   // crear el objeto producto
   let productoNuevo = new Producto(
     campoCodigo.value,
@@ -212,3 +218,5 @@ window.borrarProducto = function (codigo) {
     "success"
   );
 };
+
+// validar select de las categorias

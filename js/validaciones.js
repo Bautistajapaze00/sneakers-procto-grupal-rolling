@@ -12,7 +12,7 @@ export function campoRequerido(input) {
 
 export function validarNumeros(input) {
   // crear una expresion regular
-  let patron = /^[0-9]{1,3}$/;
+  let patron = /^[0-9]+$/; /*/^[0-9]{1,3}$/;*/
   // probar el funcionamiento del patron o expresion regular
   if (patron.test(input.value)) {
     // cumple la expresion la regular
@@ -43,7 +43,8 @@ export function validarGeneral(
   campoDescripcion,
   campoCantidad,
   campoURL,
-  campoPrecio
+  campoPrecio,
+  campoCat
 ) {
   // volver a validar todos los campos
 
@@ -52,11 +53,13 @@ export function validarGeneral(
     campoRequerido(campoCodigo) &&
     campoRequerido(campoProducto) &&
     campoRequerido(campoDescripcion) &&
+    campoRequerido(campoCat) &&
     validarNumeros(campoCantidad) &&
     validarNumeros(campoPrecio) &&
     validarURL(campoURL)
   ) {
     alerta.className = "alert alert-danger my-5 d-none";
+
     return true;
   } else {
     alerta.className = "alert alert-danger my-5";

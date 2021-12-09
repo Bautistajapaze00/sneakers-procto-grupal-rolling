@@ -139,22 +139,23 @@
               <select
                 class="form-select my-2"
                 aria-label="Default select example"
+                id="cat"
               >
-                <option value="2">Remeras</option>
-                <option value="3">Zapatillas</option>
-                <option value="3">Patalones</option>
+                <option value="">Remeras</option>
+                <option value="1">Zapatillas</option>
+                <option value="2">Patalones</option>
                 <option value="3">Accesorios</option>
               </select>
             </div>
+            <button class="btn btn-danger" type="submit">Guardar</button>
           </form>
-          <button class="btn btn-primary" type="submit">Guardar</button>
         </section>
         <div class="alert alert-danger my-5 d-none" role="alert" id="msjAlerta">
           Debe completar todos los datos
         </div>
       </section>
       <section class="my-5">
-        <button class="btn btn-primary" id="btnAgregar">Nuevo</button>
+        <button class="btn btn-danger" id="btnAgregar">Nuevo</button>
 
         <div class="table-responsive">
           <table class="table my-5">
@@ -165,7 +166,7 @@
                 <th scope="col">Descripcion</th>
                 <th scope="col">Cantidad</th>
                 <th scope="col">URL</th>
-                <th scope="col">Acciones</th>
+                <th scope="col">Precio</th>
               </tr>
             </thead>
             <tbody id="tablaProductos"></tbody>
