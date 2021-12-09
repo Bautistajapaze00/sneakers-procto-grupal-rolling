@@ -57,6 +57,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="sobreNosotros.html">Acerca de</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/error404.html">Contacto</a>
+              </li>
             </ul>
             <div>
               <a class="btn btn-danger" href="#">Admin</a>
@@ -93,6 +96,9 @@
                 id="producto"
                 placeholder="Ingrese un producto"
               />
+              <div class="invalid-feedback">
+                Debe ingresar un producto valido
+              </div>
             </div>
             <div class="mb-3">
               <label for="descripcion" class="form-label">Descripcion</label>
@@ -103,6 +109,9 @@
                 style="resize: none"
                 placeholder="Agregue la descripcion de su producto"
               ></textarea>
+              <div class="invalid-feedback">
+                Debe ingresar una descripcion valida
+              </div>
             </div>
             <div class="mb-3">
               <label for="cantidad" class="form-label">Cantidad</label>
@@ -112,6 +121,9 @@
                 id="cantidad"
                 placeholder="Agregue la cantidad de stock"
               />
+              <div class="invalid-feedback">
+                Debe ingresar una cantidad valida
+              </div>
             </div>
             <div class="mb-3">
               <label for="url" class="form-label">URL</label>
@@ -121,6 +133,9 @@
                 id="url"
                 placeholder="https://www.google.com"
               />
+              <div class="invalid-feedback">
+                Debe ingresar un URL valido
+              </div>
             </div>
             <div class="mb-3">
               <label for="precio" class="form-label">Precio</label>
@@ -168,6 +183,7 @@
                 <th scope="col">Cantidad</th>
                 <th scope="col">URL</th>
                 <th scope="col">Precio</th>
+                <th scope="col">Acciones</th>
               </tr>
             </thead>
             <tbody id="tablaProductos"></tbody>
