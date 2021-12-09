@@ -50,12 +50,12 @@ export function validarGeneral(
 
   let alerta = document.querySelector("#msjAlerta");
   if (
-    campoRequerido(campoCodigo) &&
-    campoRequerido(campoProducto) &&
-    campoRequerido(campoDescripcion) &&
-    campoRequerido(campoCat) &&
-    validarNumeros(campoCantidad) &&
-    validarNumeros(campoPrecio) &&
+    campoRequerido(campoCodigo) &
+    campoRequerido(campoProducto) &
+    campoRequerido(campoDescripcion) &
+    campoRequerido(campoCat) &
+    validarNumeros(campoCantidad) &
+    validarNumeros(campoPrecio) &
     validarURL(campoURL)
   ) {
     alerta.className = "alert alert-danger my-5 d-none";
