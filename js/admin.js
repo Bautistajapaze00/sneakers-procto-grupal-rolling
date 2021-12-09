@@ -218,5 +218,3 @@ window.borrarProducto = function (codigo) {
     "success"
   );
 };
-
-// validar select de las categorias
