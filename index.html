@@ -58,6 +58,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="pages/sobreNosotros.html">Acerca de</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/error404.html">Contacto</a>
+              </li>
             </ul>
             <div>
               <a class="btn btn-danger" href="pages/admin.html">Admin</a>
@@ -94,9 +97,9 @@
                   class="form-control"
                   placeholder="Ingrese un elemento"
                 />
-                <button type="submit" class="btn btn-danger ms-2">
-                  Buscar
-                </button>
+                <a class="ms-2" href="pages/busqueda.html">
+                  <button class="btn btn-danger" type="submit">Buscar</button> 
+                </a>
               </div>
             </form>
           </section>
@@ -104,19 +107,7 @@
             <article class="mt-5">
               <h2 class="fuenteOswald">Remeras</h2>
               <hr class="mt-0" />
-              <div class="row">
-                <div class="col-sm-12 col-md-4">
-                  <div class="card">
-                    <img src="..." class="card-img-top" alt="..." />
-                    <!-- CAMBIAR ALT AL AGREGAR INFO -->
-                    <div class="card-body">
-                      <h5 class="card-title fuenteOswald fw-bold">Nombre #1</h5>
-                      <p class="card-text">Descripcion #1</p>
-                      <p class="text-end mb-0 fw-bold fuenteOswald">$ xx.xx</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Fin de la tarjeta #1 -->
+              <div class="row" id="grillaRemeras">
               </div>
               <!-- Fin elementos remera -->
             </article>
@@ -124,19 +115,7 @@
             <article>
               <h2 class="fuenteOswald mt-5">Pantalones</h2>
               <hr class="mt-0" />
-              <div class="row">
-                <div class="col-sm-12 col-md-4">
-                  <div class="card">
-                    <img src="..." class="card-img-top" alt="..." />
-                    <!-- CAMBIAR ALT AL AGREGAR INFO -->
-                    <div class="card-body">
-                      <h5 class="card-title fuenteOswald fw-bold">Nombre #1</h5>
-                      <p class="card-text">Descripcion #1</p>
-                      <p class="text-end mb-0 fw-bold fuenteOswald">$ xx.xx</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Fin de la tarjeta #1 -->
+              <div class="row" id="grillaPantalones">
               </div>
               <!-- Fin elementos pantalones -->
             </article>
@@ -144,18 +123,7 @@
             <article>
               <h2 class="fuenteOswald mt-5">Zapatillas</h2>
               <hr class="mt-0" />
-              <div class="row">
-                <div class="col-sm-12 col-md-4">
-                  <div class="card">
-                    <img src="..." class="card-img-top" alt="..." />
-                    <!-- CAMBIAR ALT AL AGREGAR INFO -->
-                    <div class="card-body">
-                      <h5 class="card-title fuenteOswald fw-bold">Nombre #1</h5>
-                      <p class="card-text">Descripcion #1</p>
-                      <p class="text-end mb-0 fw-bold fuenteOswald">$ xx.xx</p>
-                    </div>
-                  </div>
-                </div>
+              <div class="row" id="grillaZapatillas">
                 <!-- Fin de la tarjeta #1 -->
               </div>
               <!-- Fin elementos zapatillas -->
@@ -164,18 +132,7 @@
             <article class="my-5">
               <h2 class="fuenteOswald">Accesorios</h2>
               <hr class="mt-0" />
-              <div class="row">
-                <div class="col-sm-12 col-md-4">
-                  <div class="card">
-                    <img src="..." class="card-img-top" alt="..." />
-                    <!-- CAMBIAR ALT AL AGREGAR INFO -->
-                    <div class="card-body">
-                      <h5 class="card-title fuenteOswald fw-bold">Nombre #1</h5>
-                      <p class="card-text">Descripcion #1</p>
-                      <p class="text-end mb-0 fw-bold fuenteOswald">$ xx.xx</p>
-                    </div>
-                  </div>
-                </div>
+              <div class="row" id="grillaAccesorios">
                 <!-- Fin de la tarjeta #1 -->
               </div>
               <!-- Fin elementos accesorios -->
@@ -194,9 +151,12 @@
                   class="form-control"
                   placeholder="Ingrese un elemento"
                 />
-                <button type="submit" class="btn btn-danger mx-2">
-                  Buscar
-                </button>
+            
+              
+                <a class="ms-2" href="pages/busqueda.html">
+                  <button class="btn btn-danger" type="submit">Buscar</button> 
+                </a>
+        
               </div>
             </form>
             <hr />
@@ -205,21 +165,21 @@
                 Ultimos ingresos
               </h3>
               <div class="card">
-                <div class="row">
-                  <div class="col-4">
+                <div class="row" id="grillaUltimos">
+                  <!-- <div class="col-4">
                     <img
                       src="..."
                       class="card-img-top imgCardsLaterales"
                       alt="..."
                     />
                   </div>
-                  <!-- CAMBIAR ALT AL AGREGAR INFO -->
+                  CAMBIAR ALT AL AGREGAR INFO
                   <div class="col-8 px-0">
                     <div class="card-body px-0">
                       <h5 class="card-title fuenteOswald fw-bold">Nombre #1</h5>
                       <p class="card-text fuenteOswald">$xx.xx</p>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </article>
@@ -228,7 +188,7 @@
       </section>
     </main>
     <footer class="bg-dark textoFooter">
-      <div class="container py-3">
+      <div class="container py-4">
         <div class="row">
           <div class="col-sm-12 col-md-2">
             <img src="img/logo-min.png" alt="Logo Sneakers" class="imagenFooter" />
@@ -256,5 +216,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="js/catalogo.js"></script>
   </body>
 </html>

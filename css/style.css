@@ -1,148 +1,178 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
 
 /* Generales */
 
-:root{
-    --bs-danger: #de3a3a;
+:root {
+  --bs-danger: #de3a3a;
 }
 
-.nav-link{
-    text-decoration: none;
-    color: #000;
+.nav-link {
+  text-decoration: none;
+  color: #000;
 }
 
-header{
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
-main{
-    padding-top: 61.83px;
+main {
+  padding-top: 61.83px;
 }
 
-.fuenteOswald{
-    font-family: 'Oswald', sans-serif;
+.fuenteOswald {
+  font-family: "Oswald", sans-serif;
 }
 
-.tituloFooter{
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.75rem;
-    color: #000;
+.tituloFooter {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.75rem;
+  color: #000;
 }
 
-.textoFooter{
-    color:rgb(211, 211, 211);
+.textoFooter {
+  color: rgb(211, 211, 211);
 }
 
-.imagenFooter{
-    width: 50%;
-    height: auto;
+.imagenFooter {
+  width: 50%;
+  height: auto;
 }
 
 /* Principal */
 
-.div-headerIndex{
-    position: relative;
+.div-headerIndex {
+  position: relative;
 }
 
-.div-imagenHeaderIndex{
-    height: 35vh;
+.div-imagenHeaderIndex {
+  height: 35vh;
 }
 
-.imagenHeaderIndex{
-    height: 100%;
-    object-fit: cover;
-    object-position: bottom;
+.imagenHeaderIndex {
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
 }
 
-.div-tituloHeader{
-    position: absolute;
-    top: 25%;
-    left: 0;
-    right: 0;
-    margin-right: 10%;
-    margin-left: 10%;
-    text-align: center;
+.div-tituloHeader {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin-right: 10%;
+  margin-left: 10%;
+  text-align: center;
 }
 
-.tituloHeader{
-    font-family: 'Oswald', sans-serif;
-    font-size: 5rem;
-    color: white;
-    margin: 0;
-    padding: 0;
-    text-shadow: 0 0 10px #000;
+.tituloHeader {
+  font-family: "Oswald", sans-serif;
+  font-size: 5rem;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-shadow: 0 0 10px #000;
 }
 
-.subtituloHeader{
-    color: white;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.849);
-    font-weight: 500;
+.subtituloHeader {
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.849);
+  font-weight: 500;
 }
 
-.imgCardsLaterales{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.imgCardsLaterales {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-.queryBusqueda{
-    display: none;
+.queryBusqueda {
+  display: none;
 }
 
 /* Admin */
 .colorbg {
+  background: rgb(33, 47, 61);
+  padding: 3%;
+  color: white;
+}
+
+.colorbg {
     background: rgb(33, 47, 61);
-    padding: 4%;
+    padding: 3%;
     color: white;
 }
 
 /* Acerca de */
-.slider{
-    margin-top: 175px;
-  }
 
-  .opacity:hover{
-    position: relative;
-    bottom: 3px;
-    right: 3px;
-    filter: opacity(50%);
-    transition:1s
-    }
+.div-imgPerfil {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
 
-    
+.imgPerfil {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.posImgTop {
+  object-position: top;
+}
+
+.opacity:hover {
+  position: relative;
+  bottom: 3px;
+  right: 3px;
+  filter: opacity(50%);
+  transition: 1s;
+}
 
 /* 404 */
 
+.img404vertical {
+  display: none;
+}
+
+.img404horizontal {
+  display: block;
+}
 
 /* Media queries */
 
-@media screen and (max-width: 992px){
-    /* Generales */
+@media screen and (max-width: 992px) {
+  /* Generales */
 
-    .imagenFooter{
-        width: 25%;
-        height: auto;
-        margin-bottom: 15px;
-    }
+  .imagenFooter {
+    width: 25%;
+    height: auto;
+    margin-bottom: 15px;
+  }
 
-    /* Principal */
-    .queryAside{
-        display: none;
-    }
+  /* Principal */
+  .queryAside {
+    display: none;
+  }
 
-    .queryBusqueda{
-        display: block;
-    }
+  .queryBusqueda {
+    display: block;
+  }
 
-    
-    /* Agregar seccion si se necesita */
-}
-@media all and (max-width: 567px){
-    .messi-responsive{
-        height: 100px;
-        object-fit: cover;
-    }
+  /* Agregar seccion si se necesita */
+
+  /* 404 */
+
+  .img404vertical {
+    display: block;
+  }
+
+  .img404horizontal {
+    display: none;
+  }
 }
