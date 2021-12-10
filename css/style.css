@@ -83,13 +83,24 @@ main{
 }
 
 .imgCardsLaterales{
-    height: 100%;
+    height: 10vh;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .queryBusqueda{
     display: none;
+}
+
+.div-imgCardIndex{
+  width: 100%;
+  height: 20vh;
+}
+
+.imgCardIndex{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Busqueda */
@@ -173,6 +184,9 @@ main{
         display: block;
     }
 
+    .div-imgCardIndex{
+      height: 25vh;
+    }
     
     /* Agregar seccion si se necesita */
 
