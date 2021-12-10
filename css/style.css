@@ -155,10 +155,15 @@ main {
   display: none;
 }
 
-.img404horizontal {
-  display: block;
+.img404horizontal{
+    display: block;
+    height: 86%;
+    width: 71%;
 }
-
+.divPegado{
+    margin-top: -5%;
+}
+ 
 /* Media queries */
 
 @media screen and (max-width: 992px) {
@@ -192,13 +197,10 @@ main {
     border-radius: 5px;
   }
 
-  /* 404 */
-
-  .img404vertical {
-    display: block;
-  }
-
-  .img404horizontal {
-    display: none;
-  }
+    .img404horizontal{
+        display: none;
+    }
+    .divPegado{
+        margin-top: 0%;
+    }
 }
