@@ -1,18 +1,19 @@
 export class Producto {
   constructor(
-    campoCodigo,
     campoProducto,
     campoDescripcion,
     campoCantidad,
     campoURL,
-    campoPrecio
+    campoPrecio,
+    campoCat
   ) {
-    this.codigo = campoCodigo;
+    this.codigo = 1;
     this.producto = campoProducto;
     this.descripcion = campoDescripcion;
     this.cantidad = campoCantidad;
     this.url = campoURL;
     this.precio = campoPrecio;
+    this.categoria = campoCat;
   }
 
   get mostrarCodigo() {
@@ -33,6 +34,9 @@ export class Producto {
   get mostrarPrecio() {
     return this.precio;
   }
+  get mostrarCategoria() {
+    return this.categoria;
+  }
 
   set modificarCodigo(nuevoCodigo) {
     this.codigo = nuevoCodigo;
@@ -49,8 +53,14 @@ export class Producto {
   set modificarURL(nuevaURL) {
     this.url = nuevaURL;
   }
-
   set modificarPrecio(nuevoPrecio) {
     this.precio = nuevoPrecio;
+  }
+  set modificarCategoria(nuevaCategoria) {
+    this.categoria = nuevaCategoria;
+  }
+
+  numeroAleatorio(){
+    return Math.floor(Math.random() * (99999 - 10000)) + 10000;
   }
 }

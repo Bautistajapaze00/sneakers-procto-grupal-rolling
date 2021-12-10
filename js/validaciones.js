@@ -38,7 +38,7 @@ export function validarURL(input) {
 }
 
 export function validarGeneral(
-  campoCodigo,
+  //campoCodigo,
   campoProducto,
   campoDescripcion,
   campoCantidad,
@@ -50,7 +50,7 @@ export function validarGeneral(
 
   let alerta = document.querySelector("#msjAlerta");
   if (
-    campoRequerido(campoCodigo) &
+    //campoRequerido(campoCodigo) &
     campoRequerido(campoProducto) &
     campoRequerido(campoDescripcion) &
     campoRequerido(campoCat) &

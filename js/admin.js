@@ -21,9 +21,9 @@ let listaProductos =
 let productoExistente = false; //si productoExistente=false quiero crear un nuevo producto, caso contrario quiero modificar
 let btnAgregar = document.querySelector("#btnAgregar");
 
-campoCodigo.addEventListener("blur", () => {
-  campoRequerido(campoCodigo);
-});
+//deshabilitar campo codigo
+campoCodigo.disabled = true;
+
 campoProducto.addEventListener("blur", () => {
   campoRequerido(campoProducto);
 });
@@ -55,7 +55,6 @@ function guardarProducto(e) {
 
   if (
     validarGeneral(
-      campoCodigo,
       campoProducto,
       campoDescripcion,
       campoCantidad,
@@ -72,20 +71,46 @@ function guardarProducto(e) {
   }
 }
 
+function indiceACategoria() {
+  switch (campoCat.value) {
+    case "1":
+      return "Remeras";
+    case "2":
+      return "Zapatillas";
+    case "3":
+      return "Pantalones";
+    case "4":
+      return "Accesorios";
+  }
+}
+
+function categoriaAIndice(categoria) {
+  switch (categoria) {
+    case "Remeras":
+      return 1;
+    case "Zapatillas":
+      return 2;
+    case "Pantalones":
+      return 3;
+    case "Accesorios":
+      return 4;
+  }
+}
+
 function crearProducto() {
   // crear el objeto producto
   let productoNuevo = new Producto(
-    campoCodigo.value,
     campoProducto.value,
     campoDescripcion.value,
     campoCantidad.value,
     campoURL.value,
-    campoPrecio.value
+    campoPrecio.value,
+    indiceACategoria()
   );
-  console.log(productoNuevo);
+  // creo el codigo
+  productoNuevo.codigo = productoNuevo.numeroAleatorio();
   // guardar el producto creado en el arreglo
   listaProductos.push(productoNuevo);
-  console.log(listaProductos);
   // limpiar el formulario
   limpiarFormulario();
   //guardar en localstorage el arreglo de productos
@@ -100,12 +125,20 @@ function crearProducto() {
   crearFila(productoNuevo);
 }
 
+function resetearClases(){
+  campoProducto.className = "form-control";
+  campoDescripcion.className = "form-control";
+  campoCantidad.className = "form-control";
+  campoURL.className = "form-control";
+  campoPrecio.className = "form-control";
+  campoCat.className = "form-control";
+}
+
 function limpiarFormulario() {
   // limpiar los value de todo el formulario
   formularioProducto.reset();
   // limpiar las clases
-  campoCodigo.className = "form-control";
-  campoProducto.className = "form-control";
+  resetearClases();
 
   productoExistente = false;
 }
@@ -147,12 +180,11 @@ function borrarTabla() {
 }
 
 window.prepararEdicionProducto = function (codigo) {
-  console.log(codigo);
   // obtener el objeto a modificar
   let productoBuscado = listaProductos.find((itemProducto) => {
     return itemProducto.codigo == codigo;
   });
-  console.log(productoBuscado);
+  resetearClases()
   // mostrar los datos en el form
   campoCodigo.value = productoBuscado.codigo;
   campoProducto.value = productoBuscado.producto;
@@ -160,24 +192,23 @@ window.prepararEdicionProducto = function (codigo) {
   campoCantidad.value = productoBuscado.cantidad;
   campoURL.value = productoBuscado.url;
   campoPrecio.value = productoBuscado.precio;
+  campoCat.value = categoriaAIndice(productoBuscado.categoria);
   // aqui modifico la variable boolena
   productoExistente = true;
 };
 
 function modificarProducto() {
-  console.log("aqui quiero modificar este producto");
   //buscar la posicion de mi producto dentro del arreglo
   let posicionProducto = listaProductos.findIndex((itemProducto) => {
     return itemProducto.codigo == campoCodigo.value;
   });
-  console.log(posicionProducto);
   //modificar los datos de ese producto dentro del arreglo
   listaProductos[posicionProducto].descripcion = campoDescripcion.value;
   listaProductos[posicionProducto].producto = campoProducto.value;
   listaProductos[posicionProducto].cantidad = campoCantidad.value;
   listaProductos[posicionProducto].url = campoURL.value;
   listaProductos[posicionProducto].precio = campoPrecio.value;
-  console.log(listaProductos);
+  listaProductos[posicionProducto].categoria = indiceACategoria();
   //actualizar los datos del localstorage
   guardarLocalstorage();
   //mostrar un cartel al usuario
@@ -197,12 +228,10 @@ function modificarProducto() {
 }
 
 window.borrarProducto = function (codigo) {
-  console.log(codigo);
   // borro el producto del arreglo
   let arregloProductoBorrado = listaProductos.filter((itemProducto) => {
     return itemProducto.codigo != codigo;
   });
-  console.log(arregloProductoBorrado);
   //actualizar los datos en localstorage
   listaProductos = arregloProductoBorrado;
   guardarLocalstorage();
