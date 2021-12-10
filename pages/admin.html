@@ -25,6 +25,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script
       src="https://kit.fontawesome.com/10942c11e8.js"
       crossorigin="anonymous"
@@ -32,7 +33,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <a class="navbar-brand" href="../index.html">
             <img src="../img/logo.png" alt="Logo Sneakers" width="100" />
@@ -51,14 +52,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="../index.html"
-                  >Inicio</a
-                >
+                <a class="nav-link" href="../index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="sobreNosotros.html"
-                  >Acerca de</a
-                >
+                <a class="nav-link" href="sobreNosotros.html">Acerca de</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="error404.html">Contacto</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="error404.html">Contacto</a>
@@ -73,64 +73,107 @@
     </header>
     <main class="container">
       <section>
-        <h1 class="display-3 mt-5 text-center fuenteOswald">Administrar Productos</h1>
+        <h1 class="display-3 mt-5 text-center fuenteOswald">
+          Administrar Productos
+        </h1>
         <hr />
-        <form id="formProducto">
-          <div class="mb-3">
-            <label for="codigo" class="form-label">Codigo</label>
-            <input
-              type="text"
-              class="form-control"
-              id="codigo"
-              placeholder="1234"
-            />
-            <div class="invalid-feedback">
-              Debe ingresar al menos un caracter
+        <section class="colorbg">
+          <form id="formProducto">
+            <div class="mb-3">
+              <label for="codigo" class="form-label">Codigo</label>
+              <input
+                type="text"
+                class="form-control"
+                id="codigo"
+                placeholder="El codigo se genera automaticamente"
+              />
             </div>
-          </div>
-          <div class="mb-3">
-            <label for="producto" class="form-label">Producto</label>
-            <input
-              type="text"
-              class="form-control"
-              id="producto"
-              placeholder="Ingrese un producto"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="descripcion" class="form-label">Descripcion</label>
-            <textarea
-              id="descripcion"
-              rows="3"
-              class="form-control"
-              style="resize: none;"
-              placeholder="Agregue la descripcion de su producto"
-            ></textarea>
-          </div>
-          <div class="mb-3">
-            <label for="cantidad" class="form-label">Cantidad</label>
-            <input
-              type="text"
-              class="form-control"
-              id="cantidad"
-              placeholder="10"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="url" class="form-label">URL</label>
-            <input type="text" class="form-control" id="url" placeholder="https://www.google.com" />
-          </div>
-          <button class="btn btn-danger" type="submit">Guardar</button>
-        </form>
+            <div class="mb-3">
+              <label for="producto" class="form-label">Producto</label>
+              <input
+                type="text"
+                class="form-control"
+                id="producto"
+                placeholder="Ingrese un producto"
+              />
+              <div class="invalid-feedback">
+                Debe ingresar un producto valido
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">Descripcion</label>
+              <textarea
+                id="descripcion"
+                rows="3"
+                class="form-control"
+                style="resize: none"
+                placeholder="Agregue la descripcion de su producto"
+              ></textarea>
+              <div class="invalid-feedback">
+                Debe ingresar una descripcion valida
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="cantidad" class="form-label">Cantidad</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cantidad"
+                placeholder="Agregue la cantidad de stock"
+              />
+              <div class="invalid-feedback">
+                Debe ingresar una cantidad valida
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="url" class="form-label">URL</label>
+              <input
+                type="text"
+                class="form-control"
+                id="url"
+                placeholder="https://www.google.com"
+              />
+              <div class="invalid-feedback">
+                Debe ingresar un URL valido
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="precio" class="form-label">Precio</label>
+              <input
+                type="text"
+                class="form-control"
+                id="precio"
+                placeholder="Ingrese el precio del producto"
+              />
+              <div class="invalid-feedback">
+                Debe ingresar al menos un caracter
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Categorias</label>
+              <select
+                class="form-select mb-4"
+                aria-label="Seleccione"
+                id="cat"
+              >
+                <option value="">Seleccione</option>
+                <option value="1">Remeras</option>
+                <option value="2">Zapatillas</option>
+                <option value="3">Pantalones</option>
+                <option value="4">Accesorios</option>
+              </select>
+            </div>
+            <button class="btn btn-danger" type="submit">Guardar</button>
+          </form>
+        </section>
+
         <div class="alert alert-danger my-5 d-none" role="alert" id="msjAlerta">
           Debe completar todos los datos
         </div>
       </section>
       <section class="my-5">
-        <button class="btn btn-danger" id="btnAgregar">Nuevo</button>
-        <button class="btn btn-secondary" id="btnDatosPrueba" disabled>
-          Cargar datos de prueba
-        </button>
+        <button class="btn btn-primary" id="btnAgregar">Nuevo</button>
+
         <div class="table-responsive">
           <table class="table my-5">
             <thead>
@@ -140,6 +183,8 @@
                 <th scope="col">Descripcion</th>
                 <th scope="col">Cantidad</th>
                 <th scope="col">URL</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Categoria</th>
                 <th scope="col">Acciones</th>
               </tr>
             </thead>
@@ -152,7 +197,11 @@
       <div class="container py-3">
         <div class="row">
           <div class="col-sm-12 col-md-2">
-            <img src="../img/logo-min.png" alt="Logo Sneakers" class="imagenFooter" />
+            <img
+              src="../img/logo-min.png"
+              alt="Logo Sneakers"
+              class="imagenFooter"
+            />
           </div>
           <div class="col-sm-12 col-md-4">
             <h5 class="tituloFooter text-light">Sneakers</h5>
@@ -177,5 +226,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/admin.js" type="module"></script>
   </body>
 </html>
