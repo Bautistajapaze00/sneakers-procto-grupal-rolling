@@ -50,7 +50,7 @@ productosAccesorios.forEach(function (producto) {
 //crear card de ultimos ingresos
 
 function crearCard(producto, grilla) {
-  grilla.innerHTML += `<div class="col-sm-12 col-md-4">
+  grilla.innerHTML += `<div class="col-sm-12 col-md-4 my-2">
                             <div class="card">
                                 <div class="div-imgCardIndex">
                                     <img src="${producto.url}" class="card-img-top imgCardIndex" alt="${producto.producto}" />
