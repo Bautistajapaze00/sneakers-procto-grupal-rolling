@@ -1,6 +1,7 @@
 import {
   campoRequerido,
   validarNumeros,
+  validarNumeroDecimal,
   validarURL,
   validarGeneral,
 } from "./validaciones.js";
@@ -37,7 +38,7 @@ campoURL.addEventListener("blur", () => {
   validarURL(campoURL);
 });
 campoPrecio.addEventListener("blur", () => {
-  validarNumeros(campoPrecio);
+  validarNumeroDecimal(campoPrecio);
 });
 campoCat.addEventListener("blur", () => {
   campoRequerido(campoCat);
