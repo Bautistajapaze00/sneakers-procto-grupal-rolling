@@ -1,8 +1,43 @@
+
+// llamamos 
 let selected_input = document.getElementById('search_input');
 let listaProductos = JSON.parse(localStorage.getItem('listaProductosKey'))||[];
 let grilla = document.getElementById('display-product');
 let grillaSecundaria = document.getElementById('non-display-product');
 
+let converter = JSON.parse(localStorage.getItem('searchedProductKey'))||[];
+
+if(converter.length>0 ){
+    converter.forEach((producto)=>{draw_cards_index(producto)})
+    }
+
+
+function draw_cards_index(producto){
+
+    grilla.innerHTML += `<div class="col-sm-12 col-md-4 my-2"> 
+   <div class="card">
+       <div class="div-imgCardIndex">
+           <img src="${producto.url}" class="card-img-top imgCardIndex" alt="${producto.producto}" />
+       </div>    
+       <div class="card-body">
+           <h5 class="card-title fuenteOswald fw-bold">${producto.producto}</h5>
+           <p class="card-text">${producto.descripcion}</p>
+           <p class="text-end mb-0 fw-bold fuenteOswald">$ ${producto.precio}</p>
+       </div>    
+   </div>    
+</div>`   
+ }
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 // funcion para filtrar los productos del arreglo
@@ -48,7 +83,7 @@ function not_defined(){
      grillaSecundaria.className='fuenteOswald mt-5'
     selected_input.value='';
     grilla.classList.add('d-none');
-    productos.reverse();
+    
 
 
     
