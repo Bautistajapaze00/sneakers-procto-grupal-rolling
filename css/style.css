@@ -110,6 +110,17 @@ main {
     color: rgb(56, 56, 56);
 }
 
+.mainBusqueda{
+  padding-bottom: 154px;
+}
+
+.footerBusqueda{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
 /* Admin */
 
 .colorbg {
