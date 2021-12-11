@@ -13,7 +13,7 @@
 **HTML**,
 **CSS**,
 **BOOTSTRAP**,
-**JAVASCRIPT**,
+**JAVASCRIPT**
 
 
 
