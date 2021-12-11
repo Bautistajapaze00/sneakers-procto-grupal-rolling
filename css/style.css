@@ -37,7 +37,7 @@ main {
 }
 
 .imagenFooter {
-  width: 50%;
+  width: 100px;
   height: auto;
 }
 
@@ -88,7 +88,7 @@ main {
   object-fit: contain;
 }
 
-.queryBusqueda {
+#queryBusqueda {
   display: none;
 }
 
@@ -110,18 +110,25 @@ main {
   color: rgb(56, 56, 56);
 }
 
+.bodyBusqueda {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .mainBusqueda {
-  padding-bottom: 154px;
+  flex: 1 0 auto;
 }
 
 .footerBusqueda {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  flex-shrink: 0;
 }
 
-
+.formBusqueda {
+  width: 30% !important;
+  display: inline !important;
+  vertical-align: middle;
+}
 
 /* Admin */
 
@@ -183,7 +190,6 @@ main {
   /* Generales */
 
   .imagenFooter {
-    width: 25%;
     height: auto;
     margin-bottom: 15px;
   }
@@ -193,7 +199,7 @@ main {
     display: none;
   }
 
-  .queryBusqueda {
+  #queryBusqueda {
     display: block;
   }
 
@@ -213,5 +219,11 @@ main {
   }
   .divPegado {
     margin-top: 0%;
+  }
+
+  /* Busqueda */
+
+  .formBusqueda {
+    width: 70% !important;
   }
 }
