@@ -1,15 +1,15 @@
-// llamamos
+// Llamamos a las variables
 let selected_input = document.getElementById("search_input");
-let listaProductos =
-  JSON.parse(localStorage.getItem("listaProductosKey")) || [];
+let listaProductos = JSON.parse(localStorage.getItem("listaProductosKey")) || [];
 let grilla = document.getElementById("display-product");
 let grillaSecundaria = document.getElementById("non-display-product");
 let formulario = document.getElementById("formBusqueda");
 
 let converter = JSON.parse(localStorage.getItem("searchedProductKey")) || [];
 
-console.log(converter);
-//busqueda vacia
+
+
+//Para una busqueda vacia ingresada desde el index
 if (listaProductos.length == converter.length) {
   not_defined();
 } else {
@@ -18,20 +18,20 @@ if (listaProductos.length == converter.length) {
   });
 }
 
-limpiarLocalStorage();
-
+// limpiamos el local storage
 function limpiarLocalStorage() {
   localStorage.removeItem("searchedProductKey");
 }
 
-//empiezan funciones de la busqueda de la propia pagina
+// Busqueda desde la pagina, traemos el form 
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
     
     search_product();
 });
 
-// funcion para filtrar los productos del arreglo
+// Filtramos el arreglo listaProducto por producto,categoria y descripcion
+
 function search_product() {
   grilla.innerHTML = "";
   let selected_product = listaProductos.filter((producto) => {
@@ -50,8 +50,7 @@ function search_product() {
         .includes(selected_input.value.trim().toLowerCase())
     );
   });
-
-  if (selected_product.length > 0 && selected_input.value.trim().length > 0) {
+ if (selected_product.length > 0 && selected_input.value.trim().length > 0) {
     selected_product.forEach((producto) => {
       crearCard(producto);
     });
@@ -59,10 +58,9 @@ function search_product() {
     not_defined();
   }
 
-  limpiarLocalStorage();
 }
 
-// funcion para dibujar cards de productos filtrados
+//Funcion para dibujar las cards de los productos encontrados en la busqueda
 function crearCard(producto) {
   grillaSecundaria.classList.add("d-none");
   grilla.classList.remove("d-none");
