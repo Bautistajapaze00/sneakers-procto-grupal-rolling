@@ -10,7 +10,7 @@ let converter = JSON.parse(localStorage.getItem("searchedProductKey")) || [];
 
 
 //Para una busqueda vacia ingresada desde el index
-if (listaProductos.length == converter.length) {
+if (converter.length==0 || listaProductos.length== converter.length) {
   not_defined();
 } else {
   converter.forEach((producto) => {
