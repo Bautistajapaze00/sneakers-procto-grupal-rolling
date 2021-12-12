@@ -6,7 +6,7 @@
 ## Demo 👾
 
 
-[SNEAKERS](https://github.com/nataliasanchezmkt/CRUD/tree/dev/js)
+[SNEAKERS](https://sneakersrolling.netlify.app/index.html)
 
 
 ## Contruido con🕹️
@@ -21,6 +21,6 @@
 
 [David Mercado](https://github.com/dav1dM3rcado),
 [Natalia Sanchez](https://github.com/nataliasanchezmkt),
-[Exequiel Amin](https://github.com/ezeamin),
+[Ezequiel Amin](https://github.com/ezeamin),
 [Luciano Hidalgo](https://github.com/Hidalgo2002),
 [Bautista Japaze](https://github.com/Bautistajapaze00).
