@@ -1,10 +1,8 @@
 export function campoRequerido(input) {
   if (input.value.trim().length > 0) {
-    //    console.log('paso la validacion')
     input.className = "form-control is-valid";
     return true;
   } else {
-    //    console.log('no paso la validacion')
     input.className = "form-control is-invalid";
     return false;
   }
@@ -12,7 +10,7 @@ export function campoRequerido(input) {
 
 export function validarNumeros(input) {
   // crear una expresion regular
-  let patron = /^[0-9]+$/; /*/^[0-9]{1,3}$/;*/
+  let patron = /^[0-9]+$/;
   // probar el funcionamiento del patron o expresion regular
   if (patron.test(input.value)) {
     // cumple la expresion la regular
@@ -27,7 +25,7 @@ export function validarNumeros(input) {
 
 export function validarNumeroDecimal(input) {
   // crear una expresion regular
-  let patron = /^[+]?((\d+(\.\d*)?)|(\.\d+))$/; /*/^[0-9]{1,3}$/;*/
+  let patron = /^[+]?((\d+(\.\d*)?)|(\.\d+))$/;
   // probar el funcionamiento del patron o expresion regular
   if (patron.test(input.value)) {
     // cumple la expresion la regular

@@ -33,7 +33,6 @@ for(let i=0;i<4;i++){
     crearCardUltimos(productos[i], grillaUltimos);
 }
 
-//productos.forEach(function(producto){crearCard(producto, grillaRemeras);});
 productosRemeras.forEach(function (producto) {
   crearCard(producto, grillaRemeras);
 });
